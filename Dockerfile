@@ -6,7 +6,7 @@ RUN mkdir -p /opt/muxy/bin
 
 WORKDIR /opt/muxy
 
-RUN wget https://github.com/mefellows/muxy/releases/download/v0.0.3/linux_amd64.zip -O muxy.zip
+RUN wget https://github.com/mefellows/muxy/releases/download/v0.0.5/linux_amd64.zip -O muxy.zip
 RUN unzip muxy.zip
 RUN mv muxy /opt/muxy/bin/
 RUN rm *.zip
