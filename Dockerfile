@@ -1,12 +1,12 @@
 FROM debian:latest
 MAINTAINER Matt Fellows <m@onegeek.com.au>
 
-RUN apt-get update && apt-get install -y wget unzip iptables iproute net-tools sudo
+RUN apt-get update && apt-get install -y wget unzip iptables iproute2 net-tools sudo
 RUN mkdir -p /opt/muxy/bin
 
 WORKDIR /opt/muxy
 
-RUN wget https://github.com/mefellows/muxy/releases/download/v0.0.5/linux_amd64.zip -O muxy.zip
+RUN wget https://github.com/mefellows/muxy/releases/download/v0.0.6/linux_amd64.zip -O muxy.zip
 RUN unzip muxy.zip
 RUN mv muxy /opt/muxy/bin/
 RUN rm *.zip
